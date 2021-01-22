@@ -75,6 +75,66 @@
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button class="close-modal" data-modal-close></button>
+            <h2 class="title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form>
+              <ul class="list">
+                <li class="item">
+                  <label for="usarname"
+                    ><span class="form-name">Имя</span>
+                  <div>
+                    <input
+                      type="text"
+                      name="username"
+                      autocomplete="off"
+                      id="usarname"
+                    />
+                    <!-- <svg><use></use></svg> -->
+                    </label>
+                  </div>
+                </li>
+                <li class="item">
+                  <label for="telephone"
+                    ><span class="form-name">Телефон</span>
+                  <div>
+                    <input
+                      type="tel"
+                      name="tel"
+                      autocomplete="off"
+                      id="telephone"
+                    />
+                    <!-- <svg><use></use></svg> -->
+                    </label>
+                  </div>
+                </li>
+                <li class="item">
+                  <label for="email"
+                    ><span class="form-name">Почта</span>
+                  <div>
+                    <input type="email" name="email" id="email" />
+                    <!-- <svg><use></use></svg> -->
+                    </label>
+                  </div>
+                </li>
+                <li class="item">
+                  <label><span class="form-name">Комментарий</span>
+                  <div>
+                    <textarea
+                      name="coment"
+                      rows="4"
+                      placeholder="Введите текст"
+                    ></textarea>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <label>
+                <input type="checkbox" name="conditions">
+                <span class="form-name">Соглашаюсь с рассылкой и принимаю
+                  <a href="/">Условия договора</a>
+                </span>
+              </label>
+              <button type="submit">Отправить</button>
+            </form>
           </div>
         </div>
       </section>
