@@ -296,16 +296,20 @@ img {
   margin-top: 8px;
   margin-right: 8px;
   margin-left: auto;
+  cursor: pointer;
 
   height: 30px;
   width: 30px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-  background-image: url(../images/close-button/Vector.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  color: #000000;
+
+  transition: color var(--animation-duration) var(--animation-type);
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: var(--accent-color);
 }
 
 .modal .title {
@@ -346,6 +350,8 @@ img {
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
+
+  transition: fill var(--animation-duration) var(--animation-type);
 }
 
 .input {
@@ -355,10 +361,34 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
+
+  transition: border var(--animation-duration) var(--animation-type);
 }
 
+.item:focus-within .input,
+.item:focus-within .modal-icon,
+.item:hover .input,
+.item:hover .modal-icon {
+  cursor: pointer;
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
 .textarea {
-  padding-left: 16px;
+  display: block;
+  padding: 12px 16px;
+  resize: none;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
 .checkbox-btn .form-name {
@@ -372,6 +402,20 @@ img {
 
 .form-name .link {
   color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.ghost-icon::before {
+  content: '';
+  display: inline-flex;
+  margin-right: 8.38px;
+  background-image: url(../images/icons/checkbox.svg);
+  width: 16px;
+  height: 15px;
+}
+
+.checkbox:checked + .ghost-icon::before {
+  background-image: url(../images/icons/checkbox-check.svg);
 }
 
 .checkbox-btn {
@@ -756,20 +800,31 @@ img {
   color: #ffffff;
 }
 
+.b-container {
+  display: flex;
+}
+
 .f-button {
-  position: relative;
-  width: 200px;
-  height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* width: 200px;
+  height: 50px; */
   border-radius: 4px;
   border: none;
   cursor: pointer;
 
+  padding: 10px 29px;
+
   background-color: var(--accent-color);
   color: #ffffff;
-  font-family: inherit;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  align-self: flex-end;
 }
 
 .f-button .text {
+  text-transform: none;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -777,7 +832,6 @@ img {
 }
 
 .icon-send {
-  position: absolute;
   fill: currentColor;
   margin-left: 10px;
 }
