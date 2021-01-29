@@ -333,6 +333,7 @@ img {
 }
 
 .form-name {
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -355,11 +356,13 @@ img {
 }
 
 .input {
+  display: block;
+
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 42px;
 
   transition: border var(--animation-duration) var(--animation-type);
@@ -383,7 +386,7 @@ img {
 }
 .textarea {
   display: block;
-  padding: 12px 16px;
+  padding: 11px 16px;
   resize: none;
   width: 100%;
 
@@ -784,11 +787,13 @@ img {
 }
 
 .input-position .input {
+  padding-left: 16px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   margin-top: 20px;
   background-color: transparent;
+  color: #ffffff;
 }
 
 .join-spam .text {
@@ -824,6 +829,7 @@ img {
 }
 
 .f-button .text {
+  display: block;
   text-transform: none;
   font-weight: 700;
   font-size: 16px;
